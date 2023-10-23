@@ -31,12 +31,11 @@ function removeAllChildNodes(parent) {
     }
 }
 
-
 const container = document.querySelector("#gridBox");
-makeGrid(16)
 
 
-const gridBoxes = document.querySelector("#gridBox");
+makeGrid(16);
+
 
 let value = document.querySelector("input");
 let view = document.querySelector("span");
@@ -46,7 +45,7 @@ update();
 
 const sizeAdjust = document.querySelector(".adjust");
 sizeAdjust.addEventListener("click", ()=>{
-    removeAllChildNodes(gridBoxes);
+    removeAllChildNodes(container);
     makeGrid(parseInt(view.innerText));
 })
 
