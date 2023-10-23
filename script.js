@@ -1,10 +1,7 @@
-const container = document.querySelector("#sketchBox");
-const sizeAdjust = document.querySelector("button");
-
-function makeGrid(number){
+function makeGrid(n){
     let counter = 0;    
-    for (i = 0; i <= (number**2 + number); i++){
-        const nth = number + 1;
+    for (i = 0; i <= (n**2 + n); i++){
+        const nth = n + 1;
         let div = document.createElement("div");
         container.appendChild(div);
         if (i == counter){
@@ -15,8 +12,10 @@ function makeGrid(number){
         div.style.boxSizing = "border-box";
     }
     const nodeList = document.querySelectorAll(".grid");
+
     let gridWidth = container.clientWidth / Math.sqrt(nodeList.length);
     let gridHeight = container.clientHeight / Math.sqrt(nodeList.length);
+
     nodeList.forEach((node) => {
         node.style.width = `${gridWidth}px`;
         node.style.height = `${gridHeight}px`;
@@ -32,19 +31,26 @@ function removeAllChildNodes(parent) {
     }
 }
 
+
+const container = document.querySelector("#gridBox");
 makeGrid(16)
 
 
-const gridBoxes = document.querySelector("#sketchBox");
-
+const gridBoxes = document.querySelector("#gridBox");
 
 let value = document.querySelector("input");
 let view = document.querySelector("span");
-let update = () =>  view.innerText = value.value;
+let update = () =>  view.innerText = `${value.value} x ${value.value}`;
 value.addEventListener("input", update);
 update();
 
+const sizeAdjust = document.querySelector(".adjust");
 sizeAdjust.addEventListener("click", ()=>{
     removeAllChildNodes(gridBoxes);
     makeGrid(parseInt(view.innerText));
+})
+
+const deleteColor = document.querySelector(".delete");
+deleteColor.addEventListener("click", () => {
+    location.reload();
 })

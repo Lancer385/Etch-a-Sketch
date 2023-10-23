@@ -4,18 +4,25 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
+        <title>Etch A Sketch</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <div id="sketchTool">
-            <div id="sketchBox">
+            <div id="gridBox">
             </div>
-            <input type ="range" min="2" max="64" step="2" value="16">
-            <span></span>
-            <button>Grid Size</button>
+            <div id = "circleBox">
+                <div class="circle delete">
+                    <img src="icons/trash.svg">
+                </div>
+                <input type ="range" min="2" max="64" step="2" value="16">
+                <span></span>
+                <div class="circle adjust">
+                    <img src="icons/pen.svg">
+                </div>
+            </div>
         </div>
         <script src="script.js" async defer></script>
     </body>

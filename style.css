@@ -1,13 +1,14 @@
 body {
     display: flex;
-    min-height: 90vh;
+    min-height: 97vh;
     justify-content: center ;
     align-items: center;
+    background-color: rgb(48, 44, 44);
 }
 #sketchTool {
     background-color:rgb(255, 0, 0);
-    width: 1000px;
-    height: 650px;
+    width: 850px;
+    height: 660px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -15,7 +16,7 @@ body {
     border-radius: 10px;
     border: rgb(196, 20, 20) 30px outset;
 }
-#sketchBox {
+#gridBox {
     background-color: rgb(251, 229, 229);
     display: flex;
     width: 480px;
@@ -25,3 +26,38 @@ body {
     border-radius: 10px; 
 }
 
+.grid {
+    border: 1px solid black;
+}
+
+#circleBox {
+    width: 750px;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.circle {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+span {
+    font-size: 35px;
+    width: 150px;
+    font-family: sans-serif;
+    font-weight: 800;
+    color: white;
+    text-shadow: 2px 2px black;
+    text-align: center;
+}
+
+img {
+ width: 50px;
+}
