@@ -51,5 +51,6 @@ sizeAdjust.addEventListener("click", ()=>{
 
 const deleteColor = document.querySelector(".delete");
 deleteColor.addEventListener("click", () => {
-    location.reload();
+    removeAllChildNodes(container);
+    makeGrid(16);
 })
